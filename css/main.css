@@ -32,3 +32,12 @@
 .cover h2 {
     opacity: .2    
 }
+
+.hero {
+    position: absolute;
+    width: 1170px;
+    height: 492px;
+    left: 30px;
+    top: 0px;
+}
+    

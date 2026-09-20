@@ -1,6 +1,5 @@
-:root { --bg:#fff; --ink:#1f1c1a; --muted:#77706a; --line:#d9d3cc; --stage:#f3f0ec;
+:root { color-scheme:light; --bg:#fff; --ink:#1f1c1a; --muted:#77706a; --line:#d9d3cc; --stage:#f3f0ec;
   --mono:"Courier Prime","Courier New",Courier,monospace; --serif:"Newsreader",Georgia,"Times New Roman",serif; }
-@media (prefers-color-scheme: dark) { :root { --bg:#151413; --ink:#ebe6df; --muted:#9b938a; --line:#3a3530; --stage:#1e1c1a; } }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--bg); color:var(--ink); font:1.2rem/1.7 var(--serif); -webkit-font-smoothing:antialiased; }
@@ -58,7 +57,7 @@ footer a { text-decoration:none; }
 /* nestd page */
 .nav a[aria-current="page"] { border-bottom-color:var(--ink); }
 .brandhead { text-align:center; padding:1rem 0 2.5rem; }
-.logo { display:inline-block; background:#fff; padding:1.25rem 1.75rem; } /* white panel keeps the black wordmark readable in dark mode */
+.logo { display:inline-block; background:#fff; padding:1.25rem 1.75rem; }
 .logo img { display:block; width:min(22rem,70vw); height:auto; }
 .tagline { font:.95rem var(--mono); color:var(--muted); margin:1.25rem 0 0; }
 .gallery.big { display:block; column-width:240px; column-gap:.6rem; }

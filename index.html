@@ -1,34 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- meta -->
-  <title>nestd</title>
-  <meta name="description" content="nestd">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
-
-  <!-- css -->
-  <link type="text/css" rel="stylesheet" href="/css/main.css">
-
-  <!--fonts-->
-  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic" />
-
-  <!-- js -->
-
+  <title>Karen Lynn Bottomley</title>
+  <meta name="description" content="In loving memory of Karen Lynn Bottomley.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
+  <div class="page">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top">Karen Lynn Bottomley</a>
+      <a href="#obituary">Obituary</a>
+      <a href="#gallery-section">Photos</a>
+    </nav>
 
-  <div class='hero'>
-<img src="/img/hero.png" alt="hero">
+    <div class="hero" id="top" aria-roledescription="carousel" aria-label="Photos of Karen">
+      <div class="stage" id="stage"></div>
+      <button class="arrow prev" id="hero-prev" aria-label="Previous photo">&#8249;</button>
+      <button class="arrow next" id="hero-next" aria-label="Next photo">&#8250;</button>
+    </div>
 
-<div class='container'>
-<div class='cover'>
-</div>
-  <h2></h2>
-</div>  
-</div>
+    <header class="title">
+      <h1>Karen Lynn Bottomley</h1>
+      <p class="dates">Died September 10, 2026, aged 71</p>
+    </header>
 
+    <main>
+      <article class="obituary" id="obituary">
+        <p>For a time, when she took the train, she always sat in the third car from the rear. That was where the others sat: the friends who had also swapped the city for the towns along the line. Anyone riding home from New York knew which door to look for.</p>
+        <p>She made things. That never changed. She trained at Parsons and designed nightwear in New York for Eve Stillman, the house that carried Dame Zandra Rhodes&rsquo;s American line. Annie Leibovitz once photographed her in one of her own nightgowns.</p>
+        <p>Then came Yardley. Then Rhode Island. Then Pittsburgh. In every place she found good people.</p>
+        <p>What she made in those years may have been smaller in scale, but not in ambition: faux finishing, knitting, jewelry under the name nestd; a school bus built to scale that a child could wear; a concert-worthy jumpsuit with working electronics; sets for the school play where the actors could fly; dinners that were, without overstatement, masterpieces. She had an infallible eye for what looked right. Pepsi, the dachshund, was perhaps among the chief beneficiaries of this attention, as was a very lucky piglet in Germany. Nothing she touched stayed ordinary.</p>
+        <p>She was not one for self-promotion; she did things, and did them well. A quiet talent, even if it was deafening to those around her.</p>
+        <p>The costumes were not always without cost. One Halloween, she got to her door without her keys. Geff had to hail a cab back uptown in full Peter Pan, tights and all. He likes to say she made him. He went all the same.</p>
+        <p>She was stubborn and, every so often, spat fire. She let go of nothing easily, including her life. Even at the end, she was still trying to take care of everyone&mdash;everything&mdash;else.</p>
+        <p>She leaves behind Geff, her husband; her children, Gordon (Kasandra) Bottomley and Alexandra (Robert) Atherton; her grandchildren, Riverlyn and Asher; her mother, Shirley Parmeter; her brother Jeff Schlimmeyer and sister Lisa Heinmeyer; and a great many friends, good people.</p>
+        <p class="closing">We always knew which car she would be in.</p>
+        <p class="note">The family will hold a celebration of Karen&rsquo;s life in the coming weeks. For details, visit <a href="https://nestd.co">nestd.co</a>.</p>
+      </article>
+
+      <section class="gallery-section" id="gallery-section" aria-label="Photos">
+        <h2>Photos</h2>
+        <div class="gallery" id="gallery"></div>
+      </section>
+    </main>
+
+    <footer><a href="#top">nestd</a></footer>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev" aria-label="Previous">&#8249;</button>
+    <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
+    <button class="lb-next" aria-label="Next">&#8250;</button>
+  </div>
+  <script src="js/gallery.js"></script>
 </body>
-
 </html>

@@ -1,40 +1,53 @@
-.container {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
-    overflow-x: hidden;
-    background: #fff
-}
-@keyframes pulse {
-    0% {box-shadow: 0 0 0 0 rgba(26, 26, 26, 0.2);}
-    70% {box-shadow: 0 0 0 120px transparent;}
-    100% {box-shadow: 0 0 0 0 transparent;}
-}
-.cover {
-    position: absolute;
-    bottom: 5%;
-    right: 16%
-}
-.cover h1, 
-.cover h2 {
-    font-family: 'Karla';
-    text-rendering: optimizeLegibility;
-    font-size: 60px;
-    color: #1a1a1a;
-    line-height: .8em;
-    font-weight: 100;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    display:block;
-}
-.cover h2 {
-    opacity: .2    
-}
+:root { --bg:#fff; --ink:#1f1c1a; --muted:#77706a; --line:#d9d3cc; --stage:#f3f0ec;
+  --mono:"Courier Prime","Courier New",Courier,monospace; --serif:"Newsreader",Georgia,"Times New Roman",serif; }
+@media (prefers-color-scheme: dark) { :root { --bg:#151413; --ink:#ebe6df; --muted:#9b938a; --line:#3a3530; --stage:#1e1c1a; } }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--bg); color:var(--ink); font:1.2rem/1.7 var(--serif); -webkit-font-smoothing:antialiased; }
+a { color:inherit; }
+.page { max-width:56rem; margin:0 auto; padding:0 1.25rem; }
 
-.hero {
-    top: 0px;
-    horizontal-align: center;
-}
-    
+/* nav */
+.nav { display:flex; flex-wrap:wrap; gap:.5rem 2rem; align-items:baseline; padding:2.25rem 0 2rem; font:.95rem var(--mono); }
+.nav a { text-decoration:none; border-bottom:1px solid var(--line); }
+.nav a:hover { border-bottom-color:var(--ink); }
+.nav .brand { font-weight:700; border-bottom-color:var(--ink); }
+
+/* hero carousel */
+.hero { position:relative; background:var(--stage); }
+.stage { position:relative; height:min(72vh,44rem); min-height:20rem; }
+.stage img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; opacity:0; transition:opacity .9s ease; }
+.stage img.on { opacity:1; }
+.arrow { position:absolute; top:50%; transform:translateY(-50%); width:3rem; height:4rem; border:0; background:none; color:var(--ink); opacity:.55; font-size:2.6rem; line-height:1; cursor:pointer; }
+.arrow:hover, .arrow:focus-visible { opacity:1; }
+.prev { left:.25rem; } .next { right:.25rem; }
+
+/* title */
+.title { text-align:center; padding:3.5rem 0 1rem; }
+h1 { font:400 clamp(1.7rem,5vw,2.4rem)/1.2 var(--mono); margin:0; letter-spacing:.01em; }
+.dates { font:.95rem var(--mono); color:var(--muted); margin:.75rem 0 0; }
+
+/* obituary */
+.obituary { max-width:38rem; margin:2.5rem auto 0; }
+.obituary p { margin:0 0 1.3em; }
+.obituary .closing { font-style:italic; margin-top:2em; }
+.obituary .note { font:.95rem/1.6 var(--mono); color:var(--muted); border-top:1px solid var(--line); padding-top:1.5rem; margin-top:2.5rem; }
+
+/* gallery */
+.gallery-section { margin-top:5rem; }
+h2 { font:700 .95rem var(--mono); margin:0 0 1.25rem; display:inline-block; border-bottom:1px solid var(--ink); }
+.gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:.6rem; }
+.gallery button { padding:0; border:0; background:var(--stage); cursor:zoom-in; aspect-ratio:1; overflow:hidden; }
+.gallery img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .35s; }
+.gallery button:hover img, .gallery button:focus-visible img { transform:scale(1.04); }
+footer { padding:5rem 0 3rem; font:.9rem var(--mono); color:var(--muted); }
+footer a { text-decoration:none; }
+
+/* lightbox */
+.lightbox { position:fixed; inset:0; background:rgba(15,14,13,.95); display:flex; align-items:center; justify-content:center; z-index:10; }
+.lightbox[hidden] { display:none; }
+.lightbox figure { margin:0; max-width:92vw; text-align:center; color:#ddd; font:.95rem var(--mono); }
+.lightbox img { max-width:92vw; max-height:84vh; }
+.lightbox button { position:absolute; background:none; border:0; color:#fff; font-size:2.6rem; cursor:pointer; padding:1rem; line-height:1; }
+.lb-close { top:.5rem; right:.75rem; } .lb-prev { left:.25rem; } .lb-next { right:.25rem; }
+@media (prefers-reduced-motion: reduce) { .stage img, .gallery img { transition:none; } html { scroll-behavior:auto; } }

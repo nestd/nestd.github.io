@@ -16,6 +16,7 @@
       <a class="brand" href="#top">Karen Lynn Bottomley</a>
       <a href="#obituary">Obituary</a>
       <a href="#gallery-section">Photos</a>
+      <a href="nestd.html">nestd</a>
     </nav>
 
     <div class="hero" id="top" aria-roledescription="carousel" aria-label="Photos of Karen">
@@ -27,6 +28,8 @@
     <header class="title">
       <h1>Karen Lynn Bottomley</h1>
       <p class="dates">Died September 10, 2026, aged 71</p>
+      <p class="notice">The family will hold a celebration of Karen&rsquo;s life in the coming weeks. Details will be posted here.</p>
+      <p class="contact" id="contact"></p>
     </header>
 
     <main>
@@ -40,7 +43,6 @@
         <p>She was stubborn and, every so often, spat fire. She let go of nothing easily, including her life. Even at the end, she was still trying to take care of everyone&mdash;everything&mdash;else.</p>
         <p>She leaves behind Geff, her husband; her children, Gordon (Kasandra) Bottomley and Alexandra (Robert) Atherton; her grandchildren, Riverlyn and Asher; her mother, Shirley Parmeter; her brother Jeff Schlimmeyer and sister Lisa Heinmeyer; and a great many friends, good people.</p>
         <p class="closing">We always knew which car she would be in.</p>
-        <p class="note">The family will hold a celebration of Karen&rsquo;s life in the coming weeks. For details, visit <a href="https://nestd.co">nestd.co</a>.</p>
       </article>
 
       <section class="gallery-section" id="gallery-section" aria-label="Photos">
@@ -49,7 +51,7 @@
       </section>
     </main>
 
-    <footer><a href="#top">nestd</a></footer>
+    <footer><a href="nestd.html">nestd</a></footer>
   </div>
 
   <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
@@ -58,6 +60,12 @@
     <figure><img id="lb-img" alt=""><figcaption id="lb-cap"></figcaption></figure>
     <button class="lb-next" aria-label="Next">&#8250;</button>
   </div>
+  <script>
+    // Email built in script so it is not sitting in the page source as plain text for scrapers.
+    (function () { var u = ["mrskbotts", "gmail.com"].join("@"), c = document.getElementById("contact");
+      c.appendChild(document.createTextNode("To reach the family: ")); var a = document.createElement("a"); a.href = "mailto:" + u; a.textContent = u; c.appendChild(a); })();
+  </script>
+  <script src="js/photos-karen.js"></script>
   <script src="js/gallery.js"></script>
 </body>
 </html>

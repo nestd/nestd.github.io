@@ -1,0 +1,28 @@
+// nestd jewelry photos. Add a line per photo (full-size + thumb in images/nestd/); w/h are the thumb size.
+window.PHOTOS = [
+  { src: "images/nestd/01.jpg", thumb: "images/nestd/01-thumb.jpg", w: 480, h: 640, alt: "Necklaces displayed on a bust", caption: "" },
+  { src: "images/nestd/02.jpg", thumb: "images/nestd/02-thumb.jpg", w: 478, h: 640, alt: "Beaded flower cuff", caption: "" },
+  { src: "images/nestd/03.jpg", thumb: "images/nestd/03-thumb.jpg", w: 640, h: 640, alt: "Gold and crystal chandelier earrings", caption: "" },
+  { src: "images/nestd/04.jpg", thumb: "images/nestd/04-thumb.jpg", w: 640, h: 640, alt: "Beaded flower earrings", caption: "" },
+  { src: "images/nestd/05.jpg", thumb: "images/nestd/05-thumb.jpg", w: 640, h: 640, alt: "Gold beaded collar necklace", caption: "" },
+  { src: "images/nestd/06.jpg", thumb: "images/nestd/06-thumb.jpg", w: 640, h: 480, alt: "Olive beaded fringe necklace on a bust", caption: "" },
+  { src: "images/nestd/07.jpg", thumb: "images/nestd/07-thumb.jpg", w: 480, h: 640, alt: "Filigree earrings and pearl bracelet", caption: "" },
+  { src: "images/nestd/08.jpg", thumb: "images/nestd/08-thumb.jpg", w: 640, h: 640, alt: "Beaded starfish", caption: "" },
+  { src: "images/nestd/09.jpg", thumb: "images/nestd/09-thumb.jpg", w: 640, h: 640, alt: "Beaded flower pendants", caption: "" },
+  { src: "images/nestd/10.jpg", thumb: "images/nestd/10-thumb.jpg", w: 640, h: 640, alt: "Beaded hoop earrings", caption: "" },
+  { src: "images/nestd/11.jpg", thumb: "images/nestd/11-thumb.jpg", w: 640, h: 478, alt: "Wire-knit beaded collar", caption: "" },
+  { src: "images/nestd/12.jpg", thumb: "images/nestd/12-thumb.jpg", w: 640, h: 478, alt: "Twisted wire bracelet", caption: "" },
+  { src: "images/nestd/13.jpg", thumb: "images/nestd/13-thumb.jpg", w: 640, h: 480, alt: "Beaded bracelets", caption: "" },
+  { src: "images/nestd/14.jpg", thumb: "images/nestd/14-thumb.jpg", w: 478, h: 640, alt: "Turquoise beaded rope necklace", caption: "" },
+  { src: "images/nestd/15.jpg", thumb: "images/nestd/15-thumb.jpg", w: 640, h: 478, alt: "Wire-wrapped glass pendant", caption: "" },
+  { src: "images/nestd/16.jpg", thumb: "images/nestd/16-thumb.jpg", w: 640, h: 478, alt: "Wire-wrapped filigree earrings", caption: "" },
+  { src: "images/nestd/17.jpg", thumb: "images/nestd/17-thumb.jpg", w: 480, h: 640, alt: "Woven gold necklace on a bust", caption: "" },
+  { src: "images/nestd/18.jpg", thumb: "images/nestd/18-thumb.jpg", w: 480, h: 640, alt: "Copper wire pendant on a bust", caption: "" },
+  { src: "images/nestd/19.jpg", thumb: "images/nestd/19-thumb.jpg", w: 480, h: 640, alt: "Wire and blue stone necklace on a bust", caption: "" },
+  { src: "images/nestd/20.jpg", thumb: "images/nestd/20-thumb.jpg", w: 640, h: 640, alt: "Gold and amethyst beaded necklace", caption: "" },
+  { src: "images/nestd/21.jpg", thumb: "images/nestd/21-thumb.jpg", w: 640, h: 640, alt: "Aqua bead and heart necklace", caption: "" },
+  { src: "images/nestd/22.jpg", thumb: "images/nestd/22-thumb.jpg", w: 640, h: 640, alt: "Blue beaded necklace", caption: "" },
+  { src: "images/nestd/23.jpg", thumb: "images/nestd/23-thumb.jpg", w: 640, h: 640, alt: "White and gold beaded earrings", caption: "" },
+  { src: "images/nestd/24.jpg", thumb: "images/nestd/24-thumb.jpg", w: 640, h: 480, alt: "Beaded flower cuff, detail", caption: "" },
+  { src: "images/nestd/25.jpg", thumb: "images/nestd/25-thumb.jpg", w: 640, h: 480, alt: "Beaded flower cuff, worn", caption: "" }
+];

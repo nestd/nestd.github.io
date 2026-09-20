@@ -44,7 +44,7 @@
   var limg = document.getElementById("lb-img"), cap = document.getElementById("lb-cap"), cur = 0;
   PHOTOS.forEach(function (p, i) {
     var b = document.createElement("button"), t = document.createElement("img");
-    t.src = p.thumb || p.src; t.alt = p.alt || ""; t.loading = "lazy";
+    t.src = p.thumb || p.src; t.alt = p.alt || "";
     if (p.w && p.h) { t.width = p.w; t.height = p.h; }
     b.appendChild(t); b.onclick = function () { show(i); }; grid.appendChild(b);
   });

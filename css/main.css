@@ -66,10 +66,4 @@ footer a { text-decoration:none; }
 .gallery.big img { height:auto; }
 .brandhead + main .gallery-section { margin-top:0; }
 
-/* faint half-nest watermark on the nestd page */
-body { overflow-x:clip; }
-.nestmark { position:absolute; top:5rem; right:0; width:46rem; max-width:90vw; aspect-ratio:4/3; transform:translateX(52%); background:url("../images/nestd/nest.png") center/contain no-repeat; opacity:.14; pointer-events:none; z-index:-1; }
-.page { position:relative; }
-@media (max-width:700px) { .nestmark { width:24rem; top:7rem; opacity:.12; } }
-@media (prefers-color-scheme: dark) { .nestmark { opacity:.07; } }
 .contact { font:.95rem/1.6 var(--mono); margin:.75rem 0 0; color:var(--muted); }

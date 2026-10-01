@@ -1,5 +1,7 @@
 // Shared by every page. Reads window.PHOTOS (set by a js/photos-*.js file).
 // Optional hero carousel (#stage) shows photos with hero:true; grid (#gallery) shows all.
+// window.Gallery.addPhotos(items) lets other scripts (e.g. memories.js) append
+// more photos later — used for guest-submitted photos that opted into the gallery.
 (function () {
   var PHOTOS = window.PHOTOS || [];
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -42,12 +44,16 @@
   var grid = document.getElementById("gallery"), lb = document.getElementById("lightbox");
   if (!grid || !lb) return;
   var limg = document.getElementById("lb-img"), cap = document.getElementById("lb-cap"), cur = 0;
-  PHOTOS.forEach(function (p, i) {
+
+  function addButton(p, i) {
     var b = document.createElement("button"), t = document.createElement("img");
     t.src = p.thumb || p.src; t.alt = p.alt || "";
     if (p.w && p.h) { t.width = p.w; t.height = p.h; }
     b.appendChild(t); b.onclick = function () { show(i); }; grid.appendChild(b);
-  });
+  }
+
+  PHOTOS.forEach(addButton);
+
   function show(i) {
     cur = (i + PHOTOS.length) % PHOTOS.length;
     limg.src = PHOTOS[cur].src; limg.alt = PHOTOS[cur].alt || ""; cap.textContent = PHOTOS[cur].caption || "";
@@ -64,4 +70,16 @@
     if (e.key === "ArrowLeft") show(cur - 1);
     if (e.key === "ArrowRight") show(cur + 1);
   });
+
+  // Called by memories.js once guest-submitted photos are fetched. Appends
+  // to the same grid + lightbox rather than keeping a separate display.
+  window.Gallery = {
+    addPhotos: function (items) {
+      items.forEach(function (p) {
+        var i = PHOTOS.length;
+        PHOTOS.push(p);
+        addButton(p, i);
+      });
+    },
+  };
 })();

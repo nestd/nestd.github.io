@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Share a Memory &mdash; Karen Lynn Bottomley</title>
+  <meta name="description" content="Share a memory or photo with Karen's family.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html#top">Karen Lynn Bottomley</a>
+      <a href="index.html#obituary">Obituary</a>
+      <a href="index.html#gallery-section">Photos</a>
+      <a href="share.html" aria-current="page">Share a Memory</a>
+      <a href="nestd.html">nestd</a>
+    </nav>
+
+    <header class="title">
+      <h1>Share a Memory</h1>
+      <p class="notice">A note for Karen&rsquo;s family &mdash; a memory, a thought, or just hello. Messages go straight to the family; they aren&rsquo;t posted here.</p>
+    </header>
+
+    <main>
+      <section class="share-section" aria-label="Write a memory">
+        <h2>Write a memory</h2>
+        <form id="message-form" class="share-form">
+          <label>Your name<input type="text" name="name" maxlength="80" required></label>
+          <label>Relationship to Karen <span class="optional">(optional)</span><input type="text" name="relationship" maxlength="80" placeholder="e.g. neighbor, cousin, friend from Pittsburgh"></label>
+          <label>Message<textarea name="message" maxlength="2000" rows="5" required></textarea></label>
+          <label class="checkbox-label"><input type="checkbox" name="publish"> Share this message on the site <span class="optional">(otherwise it&rsquo;s just for the family)</span></label>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAFKzYjivObeiWt2o"></div>
+          <button type="submit">Send</button>
+          <p class="form-status" id="message-status" role="status"></p>
+        </form>
+      </section>
+
+      <section class="share-section" aria-label="Share a photo">
+        <h2>Share a photo</h2>
+        <p class="share-intro">If you have a photo of Karen you&rsquo;d like the family to have, they&rsquo;d love to see it.</p>
+        <form id="photo-form" class="share-form">
+          <label>Your name <span class="optional">(optional)</span><input type="text" name="name" maxlength="80"></label>
+          <label>Photo<input type="file" name="photo" accept="image/*" required></label>
+          <label class="checkbox-label"><input type="checkbox" name="publish"> Add this photo to the photo gallery on the site <span class="optional">(otherwise it stays with the family)</span></label>
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAFKzYjivObeiWt2o"></div>
+          <button type="submit">Share</button>
+          <p class="form-status" id="photo-status" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer><a href="nestd.html">nestd</a></footer>
+  </div>
+
+  <script src="js/share.js"></script>
+</body>
+</html>

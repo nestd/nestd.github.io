@@ -20,7 +20,8 @@
       li.appendChild(body);
       mList.appendChild(li);
     });
-    if (!items.length && empty) empty.hidden = false;
+    // Hidden for now until there are enough guest messages to show the section well.
+    // if (!items.length && empty) empty.hidden = false;
   }).catch(function () {});
 
   if (window.Gallery) {
